@@ -1,0 +1,12 @@
+ei m2rganud muutust, kuna sulgesin konsooli
+
+Aga proovi uuesti - kustuta .bashrc ja .bash_profile √ra, vaata mis muutub ja
+siis kopeeri tagasi - v√id nad ka niisama √mber nimetada n√iteks
+
+
+total 8
+-rw-r--r-- 1 tudeng15 tudengid  44 Apr 15 07:15 muutus.txt
+-rw-r--r-- 1 tudeng15 tudengid 121 Apr 15 07:20 roo.txt
+
+see n√√d k√ll "eelmine" ehk samm √lalpool olev kataloog pole. Loe √lesannet
+ikka t√helepanelikumalt.
