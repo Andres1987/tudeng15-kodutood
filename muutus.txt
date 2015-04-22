@@ -1,12 +1,14 @@
 ei m2rganud muutust, kuna sulgesin konsooli
 
-Aga proovi uuesti - kustuta .bashrc ja .bash_profile ﾃra, vaata mis muutub ja
-siis kopeeri tagasi - vﾃid nad ka niisama ﾃmber nimetada nﾃiteks
+Aga proovi uuesti - kustuta .bashrc ja .bash_profile ﾃビa, vaata mis muutub ja
+siis kopeeri tagasi - vﾃナd nad ka niisama ﾃノber nimetada nﾃナteks
 
-
+ uuuu
+ 
+ 
 total 8
 -rw-r--r-- 1 tudeng15 tudengid  44 Apr 15 07:15 muutus.txt
 -rw-r--r-- 1 tudeng15 tudengid 121 Apr 15 07:20 roo.txt
 
-see nﾃﾃd kﾃll "eelmine" ehk samm ﾃlalpool olev kataloog pole. Loe ﾃlesannet
-ikka tﾃhelepanelikumalt.
+see nﾃεヅ kﾃネl "eelmine" ehk samm ﾃネalpool olev kataloog pole. Loe ﾃネesannet
+ikka tﾃドelepanelikumalt.
