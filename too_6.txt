@@ -1,0 +1,145 @@
+cowsay is /usr/bin/cowsay
+cowsay(1)                                                            cowsay(1)
+
+
+
+NNAAMMEE
+       cowsay/cowthink - configurable speaking/thinking cow (and a bit more)
+
+SSYYNNOOPPSSIISS
+       cowsay  [--ee  _e_y_e___s_t_r_i_n_g] [--ff _c_o_w_f_i_l_e] [--hh] [--ll] [--nn] [--TT _t_o_n_g_u_e___s_t_r_i_n_g]
+       [--WW _c_o_l_u_m_n] [--bbddggppssttwwyy]
+
+DDEESSCCRRIIPPTTIIOONN
+       _C_o_w_s_a_y generates an ASCII picture of a cow saying something provided by
+       the  user.   If run with no arguments, it accepts standard input, word-
+       wraps the message given at about 40 columns, and prints the cow  saying
+       the given message on standard output.
+
+       To  aid in the use of arbitrary messages with arbitrary whitespace, use
+       the --nn option.  If it is specified, the given message will not be word-
+       wrapped.   This is possibly useful if you want to make the cow think or
+       speak in figlet(6).  If --nn is specified, there must not be any command-
+       line arguments left after all the switches have been processed.
+
+       The  --WW  specifies  roughly  (where the message should be wrapped.  The
+       default is equivalent to --WW 4400 i.e. wrap words at or  before  the  40th
+       column.
+
+       If  any  command-line  arguments  are left over after all switches have
+       been processed, they become the cow's message.  The  program  will  not
+       accept standard input for a message in this case.
+
+       There are several provided modes which change the appearance of the cow
+       depending on its particular emotional/physical state.   The  --bb  option
+       initiates  Borg  mode;  --dd  causes  the  cow to appear dead; --gg invokes
+       greedy mode; --pp causes a state of paranoia to come  over  the  cow;  --ss
+       makes  the  cow  appear thoroughly stoned; --tt yields a tired cow; --ww is
+       somewhat the opposite of --tt, and initiates wired mode; --yy brings on the
+       cow's youthful appearance.
+
+       The  user  may  specify  the  --ee option to select the appearance of the
+       cow's eyes, in which case the first  two  characters  of  the  argument
+       string _e_y_e___s_t_r_i_n_g will be used.  The default eyes are 'oo'.  The tongue
+       is similarly configurable through --TT and _t_o_n_g_u_e___s_t_r_i_n_g; it must be  two
+       characters  and does not appear by default.  However, it does appear in
+       the 'dead' and 'stoned' modes.  Any configuration done  by  --ee  and  --TT
+       will be lost if one of the provided modes is used.
+
+       The  --ff option specifies a particular cow picture file (''cowfile'') to
+       use.  If the cowfile spec contains '/' then it will be interpreted as a
+       path  relative to the current directory.  Otherwise, cowsay will search
+       the path specified in the CCOOWWPPAATTHH environment variable.   To  list  all
+       cowfiles on the current CCOOWWPPAATTHH, invoke ccoowwssaayy with the --ll switch.
+
+       If  the program is invoked as ccoowwtthhiinnkk then the cow will think its mes-
+       sage instead of saying it.
+
+
+CCOOWWFFIILLEE FFOORRMMAATT
+       A cowfile is made up of a simple block of ppeerrll(1) code, which assigns a
+       picture  of  a  cow  to the variable $$tthhee__ccooww.  Should you wish to cus-
+       tomize the eyes or the tongue of the cow, then the variables $$eeyyeess  and
+       $$ttoonngguuee may be used.  The trail leading up to the cow's message balloon
+       is composed of the character(s) in the $$tthhoouugghhttss variable.   Any  back-
+       slashes  must  be reduplicated to prevent interpolation.  The name of a
+       cowfile should end with ..ccooww, otherwise it is assumed not to be a  cow-
+       file.   Also, at-signs (''@'') must be backslashed because that is what
+       Perl 5 expects.
+
+
+CCOOMMPPAATTIIBBIILLIITTYY WWIITTHH OOLLDDEERR VVEERRSSIIOONNSS
+       What older versions? :-)
+
+       Version 3.x is fully backward-compatible with 2.x versions.  If  you're
+       still  using  a 1.x version, consider upgrading.  And tell me where you
+       got the older versions, since I didn't exactly put them up  for  world-
+       wide access.
+
+       Oh,  just  so  you  know,  this  manual  page documents version 3.02 of
+       cowsay.
+
+EENNVVIIRROONNMMEENNTT
+       The COWPATH environment variable, if present, will be  used  to  search
+       for  cowfiles.  It contains a colon-separated list of directories, much
+       like PPAATTHH oorr MMAANNPPAATTHH.  It should always contain  the  //uussrr//sshhaarree//ccoowwssaayy
+       directory,  or  at  least a directory with a file called ddeeffaauulltt..ccooww in
+       it.
+
+FFIILLEESS
+       //uussrr//sshhaarree//ccoowwssaayy holds a sample set of cowfiles.  If your  CCOOWWPPAATTHH  is
+       not explicitly set, it automatically contains this directory.
+
+BBUUGGSS
+       If there are any, please notify the author at the address below.
+
+AAUUTTHHOORR
+       Tony   Monroe  (tony@nog.net),  with  suggestions  from  Shannon  Appel
+       (appel@CSUA.Berkeley.EDU)  and  contributions   from   Anthony   Polito
+       (aspolito@CSUA.Berkeley.EDU).
+
+SSEEEE AALLSSOO
+       perl(1), wall(1), nwrite(1), figlet(6)
+
+
+
+                         $Date: 1999/11/04 19:50:40 $                cowsay(1)
+2.a) grep OMIT -v [tekstifail]
+2.b) tr A-Z a-z [tekstifail]
+2.c) sed s/th/the/ [tekstifail]
+2.d) awk {print $1,$2,$5,$4,$3} [tekstifail]
+4.
+116334201  restriction endonuclease [Lactobacillus brevis ATCC 367]
+116630087  restriction endonuclease [Lactobacillus gasseri ATCC 33323]
+184155518  restriction endonuclease [Lactobacillus fermentum IFO 3956] 
+258508022  type III restriction-modification system restriction subunit [Lactobacillus rhamnosus GG] 
+336054630  restriction endonuclease [Lactobacillus kefiranofaciens ZW3]
+347525351  type III restriction-modification system enzyme [Lactobacillus ruminis ATCC 27782]
+385812395  restriction endonuclease [Lactobacillus fermentum CECT 5716]
+385826366  Type III restriction-modification system restriction subunit [Lactobacillus johnsonii DPC 6026]
+385827702  restriction endonuclease [Lactobacillus rhamnosus GG]
+385836850  DNA restrictase, restriction system type III [Lactococcus lactis subsp. cremoris A76]
+42780095  type III restriction-modification system enzyme, R subunit [Bacillus cereus ATCC 10987]
+446620838  type III restriction endonuclease StyLTI [Bacillus cereus] 
+488399750  type III restriction endonuclease StyLTI [Staphylococcus epidermidis]
+489744279  type III restriction endonuclease StyLTI [Lactobacillus gasseri]
+489748732  type III restriction endonuclease StyLTI [Lactobacillus gasseri] 
+489772697  type III restriction endonuclease StyLTI [Lactobacillus reuteri]
+489777764  type III restriction endonuclease StyLTI [Lactobacillus fermentum]
+491947273  type III restriction endonuclease StyLTI [Lactobacillus rhamnosus]
+493545951  type III restriction endonuclease StyLTI [Lactobacillus mucosae]
+494198622  type III restriction endonuclease StyLTI [Lactobacillus antri]
+497240696  type III restriction-modification system StyLTI enzyme res [Lactobacillus saerimneri]
+499987605  type III restriction endonuclease StyLTI [Lactobacillus brevis] 
+501359748  type III restriction endonuclease StyLTI [Lactobacillus fermentum] 
+503620516  type III restriction endonuclease StyLTI [Lactobacillus kefiranofaciens] 
+503839381  type III restriction endonuclease StyLTI [Lactobacillus ruminis] 
+504380636  type III restriction endonuclease StyLTI [Lactobacillus johnsonii] 
+504382322  type III restriction endonuclease StyLTI [Lactobacillus rhamnosus] 
+504386396  DNA restrictase, restriction system type III [Lactococcus lactis] 
+512591053  restriction endonuclease [Lactobacillus reuteri I5007]
+512738883  restriction endonuclease [Lactobacillus reuteri] 
+518082001  type III restriction endonuclease StyLTI [Lactobacillus reuteri]
+523688693  type III restriction-modification system StyLTI enzyme res [Lactobacillus gasseri]
+547468534  type III site-specific deoxyribonuclease [Lactobacillus amylovorus CAG:719]
+654312708  type III restriction-modification system StyLTI enzyme res [Lactobacillus psittaci]
